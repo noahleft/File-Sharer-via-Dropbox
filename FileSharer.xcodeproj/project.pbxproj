@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E587BEA1E352AF600FB2490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E587BE91E352AF600FB2490 /* AppDelegate.swift */; };
+		2E587BEC1E352AF600FB2490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E587BEB1E352AF600FB2490 /* ViewController.swift */; };
+		2E587BEE1E352AF600FB2490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E587BED1E352AF600FB2490 /* Assets.xcassets */; };
+		2E587BF11E352AF600FB2490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E587BEF1E352AF600FB2490 /* Main.storyboard */; };
+		2E587BFC1E352AF600FB2490 /* FileSharerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E587BFB1E352AF600FB2490 /* FileSharerTests.swift */; };
+		2E587C071E352AF600FB2490 /* FileSharerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E587C061E352AF600FB2490 /* FileSharerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E587BF81E352AF600FB2490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E587BDE1E352AF600FB2490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E587BE51E352AF600FB2490;
+			remoteInfo = FileSharer;
+		};
+		2E587C031E352AF600FB2490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E587BDE1E352AF600FB2490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E587BE51E352AF600FB2490;
+			remoteInfo = FileSharer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E587BE61E352AF600FB2490 /* FileSharer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileSharer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E587BE91E352AF600FB2490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E587BEB1E352AF600FB2490 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E587BED1E352AF600FB2490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E587BF01E352AF600FB2490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E587BF21E352AF600FB2490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E587BF71E352AF600FB2490 /* FileSharerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileSharerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E587BFB1E352AF600FB2490 /* FileSharerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSharerTests.swift; sourceTree = "<group>"; };
+		2E587BFD1E352AF600FB2490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E587C021E352AF600FB2490 /* FileSharerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileSharerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E587C061E352AF600FB2490 /* FileSharerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSharerUITests.swift; sourceTree = "<group>"; };
+		2E587C081E352AF600FB2490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E587BE31E352AF600FB2490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E587BF41E352AF600FB2490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E587BFF1E352AF600FB2490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E587BDD1E352AF600FB2490 = {
+			isa = PBXGroup;
+			children = (
+				2E587BE81E352AF600FB2490 /* FileSharer */,
+				2E587BFA1E352AF600FB2490 /* FileSharerTests */,
+				2E587C051E352AF600FB2490 /* FileSharerUITests */,
+				2E587BE71E352AF600FB2490 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E587BE71E352AF600FB2490 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E587BE61E352AF600FB2490 /* FileSharer.app */,
+				2E587BF71E352AF600FB2490 /* FileSharerTests.xctest */,
+				2E587C021E352AF600FB2490 /* FileSharerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E587BE81E352AF600FB2490 /* FileSharer */ = {
+			isa = PBXGroup;
+			children = (
+				2E587BE91E352AF600FB2490 /* AppDelegate.swift */,
+				2E587BEB1E352AF600FB2490 /* ViewController.swift */,
+				2E587BED1E352AF600FB2490 /* Assets.xcassets */,
+				2E587BEF1E352AF600FB2490 /* Main.storyboard */,
+				2E587BF21E352AF600FB2490 /* Info.plist */,
+			);
+			path = FileSharer;
+			sourceTree = "<group>";
+		};
+		2E587BFA1E352AF600FB2490 /* FileSharerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E587BFB1E352AF600FB2490 /* FileSharerTests.swift */,
+				2E587BFD1E352AF600FB2490 /* Info.plist */,
+			);
+			path = FileSharerTests;
+			sourceTree = "<group>";
+		};
+		2E587C051E352AF600FB2490 /* FileSharerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E587C061E352AF600FB2490 /* FileSharerUITests.swift */,
+				2E587C081E352AF600FB2490 /* Info.plist */,
+			);
+			path = FileSharerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E587BE51E352AF600FB2490 /* FileSharer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E587C0B1E352AF600FB2490 /* Build configuration list for PBXNativeTarget "FileSharer" */;
+			buildPhases = (
+				2E587BE21E352AF600FB2490 /* Sources */,
+				2E587BE31E352AF600FB2490 /* Frameworks */,
+				2E587BE41E352AF600FB2490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FileSharer;
+			productName = FileSharer;
+			productReference = 2E587BE61E352AF600FB2490 /* FileSharer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E587BF61E352AF600FB2490 /* FileSharerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E587C0E1E352AF600FB2490 /* Build configuration list for PBXNativeTarget "FileSharerTests" */;
+			buildPhases = (
+				2E587BF31E352AF600FB2490 /* Sources */,
+				2E587BF41E352AF600FB2490 /* Frameworks */,
+				2E587BF51E352AF600FB2490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E587BF91E352AF600FB2490 /* PBXTargetDependency */,
+			);
+			name = FileSharerTests;
+			productName = FileSharerTests;
+			productReference = 2E587BF71E352AF600FB2490 /* FileSharerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E587C011E352AF600FB2490 /* FileSharerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E587C111E352AF600FB2490 /* Build configuration list for PBXNativeTarget "FileSharerUITests" */;
+			buildPhases = (
+				2E587BFE1E352AF600FB2490 /* Sources */,
+				2E587BFF1E352AF600FB2490 /* Frameworks */,
+				2E587C001E352AF600FB2490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E587C041E352AF600FB2490 /* PBXTargetDependency */,
+			);
+			name = FileSharerUITests;
+			productName = FileSharerUITests;
+			productReference = 2E587C021E352AF600FB2490 /* FileSharerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E587BDE1E352AF600FB2490 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "林世豐";
+				TargetAttributes = {
+					2E587BE51E352AF600FB2490 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TD2N22QLUY;
+						ProvisioningStyle = Automatic;
+					};
+					2E587BF61E352AF600FB2490 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TD2N22QLUY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2E587BE51E352AF600FB2490;
+					};
+					2E587C011E352AF600FB2490 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TD2N22QLUY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2E587BE51E352AF600FB2490;
+					};
+				};
+			};
+			buildConfigurationList = 2E587BE11E352AF600FB2490 /* Build configuration list for PBXProject "FileSharer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E587BDD1E352AF600FB2490;
+			productRefGroup = 2E587BE71E352AF600FB2490 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E587BE51E352AF600FB2490 /* FileSharer */,
+				2E587BF61E352AF600FB2490 /* FileSharerTests */,
+				2E587C011E352AF600FB2490 /* FileSharerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E587BE41E352AF600FB2490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E587BEE1E352AF600FB2490 /* Assets.xcassets in Resources */,
+				2E587BF11E352AF600FB2490 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E587BF51E352AF600FB2490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E587C001E352AF600FB2490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E587BE21E352AF600FB2490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E587BEC1E352AF600FB2490 /* ViewController.swift in Sources */,
+				2E587BEA1E352AF600FB2490 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E587BF31E352AF600FB2490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E587BFC1E352AF600FB2490 /* FileSharerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E587BFE1E352AF600FB2490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E587C071E352AF600FB2490 /* FileSharerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E587BF91E352AF600FB2490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E587BE51E352AF600FB2490 /* FileSharer */;
+			targetProxy = 2E587BF81E352AF600FB2490 /* PBXContainerItemProxy */;
+		};
+		2E587C041E352AF600FB2490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E587BE51E352AF600FB2490 /* FileSharer */;
+			targetProxy = 2E587C031E352AF600FB2490 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E587BEF1E352AF600FB2490 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E587BF01E352AF600FB2490 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E587C091E352AF600FB2490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E587C0A1E352AF600FB2490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		2E587C0C1E352AF600FB2490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TD2N22QLUY;
+				INFOPLIST_FILE = FileSharer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = noahleft.FileSharer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2E587C0D1E352AF600FB2490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TD2N22QLUY;
+				INFOPLIST_FILE = FileSharer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = noahleft.FileSharer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2E587C0F1E352AF600FB2490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TD2N22QLUY;
+				INFOPLIST_FILE = FileSharerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = noahleft.FileSharerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FileSharer.app/Contents/MacOS/FileSharer";
+			};
+			name = Debug;
+		};
+		2E587C101E352AF600FB2490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TD2N22QLUY;
+				INFOPLIST_FILE = FileSharerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = noahleft.FileSharerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FileSharer.app/Contents/MacOS/FileSharer";
+			};
+			name = Release;
+		};
+		2E587C121E352AF600FB2490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TD2N22QLUY;
+				INFOPLIST_FILE = FileSharerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = noahleft.FileSharerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FileSharer;
+			};
+			name = Debug;
+		};
+		2E587C131E352AF600FB2490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TD2N22QLUY;
+				INFOPLIST_FILE = FileSharerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = noahleft.FileSharerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FileSharer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E587BE11E352AF600FB2490 /* Build configuration list for PBXProject "FileSharer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E587C091E352AF600FB2490 /* Debug */,
+				2E587C0A1E352AF600FB2490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E587C0B1E352AF600FB2490 /* Build configuration list for PBXNativeTarget "FileSharer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E587C0C1E352AF600FB2490 /* Debug */,
+				2E587C0D1E352AF600FB2490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E587C0E1E352AF600FB2490 /* Build configuration list for PBXNativeTarget "FileSharerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E587C0F1E352AF600FB2490 /* Debug */,
+				2E587C101E352AF600FB2490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E587C111E352AF600FB2490 /* Build configuration list for PBXNativeTarget "FileSharerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E587C121E352AF600FB2490 /* Debug */,
+				2E587C131E352AF600FB2490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E587BDE1E352AF600FB2490 /* Project object */;
+}
