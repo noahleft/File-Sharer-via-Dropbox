@@ -7,13 +7,18 @@
 //
 
 import Cocoa
+import SwiftyDropbox
+
 
 class ViewController: NSViewController {
 
+    var filenames: Array<String>?
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        fetchFileList()
     }
 
     override var representedObject: Any? {
@@ -22,6 +27,47 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func pressLogin(_ sender: Any) {
+        pressLoginButton()
+    }
+    
+    @IBAction func pressFetch(_ sender: Any) {
+        fetchFileList()
+    }
+    
+    func pressLoginButton() {
+        DropboxClientsManager.authorizeFromController(sharedWorkspace: NSWorkspace.shared(),
+                                                      controller: self,
+                                                      openURL: { (url: URL) -> Void in
+                                                        NSWorkspace.shared().open(url)
+        })
+    }
+    
+    func fetchFileList() {
+        if let client = DropboxClientsManager.authorizedClient {
+            print("dropbox client is auth.")
+            
+            // List contents of app folder
+            _ = client.files.listFolder(path: "").response { response, error in
+                if let result = response {
+                    print("Folder contents:")
+                    for entry in result.entries {
+                        print(entry.name)
+                        
+                        // Check that file is a photo (by file extension)
+                        if entry.name.hasSuffix(".jpg") || entry.name.hasSuffix(".png") {
+                            // Add photo!
+                            self.filenames?.append(entry.name)
+                        }
+                    }
+                    
+                } else {
+                    print("Error: \(error!)")
+                }
+            }
+            
+        }
+    }
 
 }
 

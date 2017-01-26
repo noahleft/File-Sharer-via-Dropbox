@@ -13,6 +13,12 @@
 		2E587BF11E352AF600FB2490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E587BEF1E352AF600FB2490 /* Main.storyboard */; };
 		2E587BFC1E352AF600FB2490 /* FileSharerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E587BFB1E352AF600FB2490 /* FileSharerTests.swift */; };
 		2E587C071E352AF600FB2490 /* FileSharerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E587C061E352AF600FB2490 /* FileSharerUITests.swift */; };
+		2EE34F3A1E3A2B68000F8BD0 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE34F391E3A2B68000F8BD0 /* SwiftyDropbox.framework */; };
+		2EE34F3B1E3A2B68000F8BD0 /* SwiftyDropbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE34F391E3A2B68000F8BD0 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2EE34F3D1E3A2B73000F8BD0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE34F3C1E3A2B73000F8BD0 /* Alamofire.framework */; };
+		2EE34F3F1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EE34F3E1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM */; };
+		2EE34F411E3A2C9F000F8BD0 /* Alamofire.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 2EE34F401E3A2C9F000F8BD0 /* Alamofire.framework.dSYM */; };
+		2EEFF7521E3A3071005D0325 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE34F3C1E3A2B73000F8BD0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				2EE34F3F1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2EEFF7521E3A3071005D0325 /* Alamofire.framework in Embed Frameworks */,
+				2EE34F3B1E3A2B68000F8BD0 /* SwiftyDropbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +76,10 @@
 		2E587C021E352AF600FB2490 /* FileSharerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileSharerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E587C061E352AF600FB2490 /* FileSharerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSharerUITests.swift; sourceTree = "<group>"; };
 		2E587C081E352AF600FB2490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EE34F391E3A2B68000F8BD0 /* SwiftyDropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyDropbox.framework; path = Carthage/Build/Mac/SwiftyDropbox.framework; sourceTree = "<group>"; };
+		2EE34F3C1E3A2B73000F8BD0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		2EE34F3E1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyDropbox.framework.dSYM; path = Carthage/Build/Mac/SwiftyDropbox.framework.dSYM; sourceTree = "<group>"; };
+		2EE34F401E3A2C9F000F8BD0 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/Mac/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE34F3D1E3A2B73000F8BD0 /* Alamofire.framework in Frameworks */,
+				2EE34F3A1E3A2B68000F8BD0 /* SwiftyDropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +163,10 @@
 		2E587C141E352D7F00FB2490 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EE34F3E1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM */,
+				2EE34F401E3A2C9F000F8BD0 /* Alamofire.framework.dSYM */,
+				2EE34F391E3A2B68000F8BD0 /* SwiftyDropbox.framework */,
+				2EE34F3C1E3A2B73000F8BD0 /* Alamofire.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -266,6 +285,7 @@
 			files = (
 				2E587BEE1E352AF600FB2490 /* Assets.xcassets in Resources */,
 				2E587BF11E352AF600FB2490 /* Main.storyboard in Resources */,
+				2EE34F411E3A2C9F000F8BD0 /* Alamofire.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TD2N22QLUY;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -450,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TD2N22QLUY;
 				FRAMEWORK_SEARCH_PATHS = (

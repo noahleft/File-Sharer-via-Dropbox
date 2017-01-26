@@ -7,20 +7,39 @@
 //
 
 import Cocoa
+import SwiftyDropbox
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        DropboxClientsManager.setupWithAppKeyDesktop("9aji0wsn1xpj392")
+        
+        NSAppleEventManager.shared().setEventHandler(self,
+                                                     andSelector: #selector(handleGetURLEvent),
+                                                     forEventClass: AEEventClass(kInternetEventClass),
+                                                     andEventID: AEEventID(kAEGetURL))
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    
+    func handleGetURLEvent(_ event: NSAppleEventDescriptor?, replyEvent: NSAppleEventDescriptor?) {
+        if let aeEventDescriptor = event?.paramDescriptor(forKeyword: AEKeyword(keyDirectObject)) {
+            if let urlStr = aeEventDescriptor.stringValue {
+                let url = URL(string: urlStr)!
+                if let authResult = DropboxClientsManager.handleRedirectURL(url) {
+                    switch authResult {
+                    case .success:
+                        print("Success! User is logged into Dropbox.")
+                    case .cancel:
+                        print("Authorization flow was manually canceled by user!")
+                    case .error(_, let description):
+                        print("Error: \(description)")
+                    }
+                }
+            }
+        }
     }
-
+    
 
 }
 
