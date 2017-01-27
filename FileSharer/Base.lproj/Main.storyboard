@@ -710,6 +710,9 @@
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="k8G-WO-wWA" id="HI0-hS-orJ"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

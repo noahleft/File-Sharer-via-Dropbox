@@ -12,12 +12,13 @@ import SwiftyDropbox
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var loginButton: NSButton!
     var filenames: Array<String>?
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
         fetchFileList()
     }
 
@@ -33,6 +34,13 @@ class ViewController: NSViewController {
     
     @IBAction func pressFetch(_ sender: Any) {
         fetchFileList()
+        checkLoginButton()
+    }
+    
+    func checkLoginButton() {
+        if (DropboxClientsManager.authorizedClient != nil) {
+            loginButton.isHidden = true
+        }
     }
     
     func pressLoginButton() {
