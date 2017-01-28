@@ -1,0 +1,5 @@
+# ObjectiveDropboxOfficial
+github "https://github.com/dropbox/dropbox-sdk-obj-c" ~> 2.0.2
+# SwiftyDropbox
+github "https://github.com/dropbox/SwiftyDropbox" ~> 4.1.1
+
