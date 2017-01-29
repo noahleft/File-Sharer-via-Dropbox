@@ -19,6 +19,7 @@
 		2EE34F3F1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EE34F3E1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM */; };
 		2EE34F411E3A2C9F000F8BD0 /* Alamofire.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 2EE34F401E3A2C9F000F8BD0 /* Alamofire.framework.dSYM */; };
 		2EEFF7521E3A3071005D0325 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE34F3C1E3A2B73000F8BD0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2EEFF7541E3E2C04005D0325 /* variableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEFF7531E3E2C04005D0325 /* variableObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		2EE34F3C1E3A2B73000F8BD0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		2EE34F3E1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyDropbox.framework.dSYM; path = Carthage/Build/Mac/SwiftyDropbox.framework.dSYM; sourceTree = "<group>"; };
 		2EE34F401E3A2C9F000F8BD0 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/Mac/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		2EEFF7531E3E2C04005D0325 /* variableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = variableObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				2E587BE91E352AF600FB2490 /* AppDelegate.swift */,
 				2E587BEB1E352AF600FB2490 /* ViewController.swift */,
+				2EEFF7531E3E2C04005D0325 /* variableObject.swift */,
 				2E587BED1E352AF600FB2490 /* Assets.xcassets */,
 				2E587BEF1E352AF600FB2490 /* Main.storyboard */,
 				2E587BF21E352AF600FB2490 /* Info.plist */,
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E587BEC1E352AF600FB2490 /* ViewController.swift in Sources */,
+				2EEFF7541E3E2C04005D0325 /* variableObject.swift in Sources */,
 				2E587BEA1E352AF600FB2490 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

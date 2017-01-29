@@ -13,7 +13,10 @@ import SwiftyDropbox
 class ViewController: NSViewController {
 
     @IBOutlet weak var loginButton: NSButton!
+    @IBOutlet weak var tableView: NSTableView!
+    
     var filenames: Array<String>?
+    dynamic var filelist : [FileObject] = []
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +68,9 @@ class ViewController: NSViewController {
                         // Check that file is a photo (by file extension)
                         if entry.name.hasSuffix(".jpg") || entry.name.hasSuffix(".png") {
                             // Add photo!
-                            self.filenames?.append(entry.name)
+                            let index : Int = self.filelist.count + 1
+                            var file : FileObject = FileObject(index: index, name: entry.name)
+                            self.filelist.append(file)
                         }
                     }
                     
