@@ -148,33 +148,20 @@ class ViewController: NSViewController {
                         print("Error: \(error!)")
                     }
                 }
-//                // List contents of app folder
-//                _ = client.files.listFolder(path: "").response { response, error in
-//                    if let result = response {
-//                        print("Folder contents:")
-//                        for entry in result.entries {
-//                            print(entry.name)
-//                            
-//                            // Check that file is a photo (by file extension)
-//                            if entry.name.hasSuffix(".jpg") || entry.name.hasSuffix(".png") {
-//                                // Add photo!
-//                                let index : Int = self.filelist.count + 1
-//                                var file : FileObject = FileObject(index: index, name: entry.name)
-//                                self.filelist.append(file)
-//                            }
-//                        }
-//                        
-//                    } else {
-//                        print("Error: \(error!)")
-//                    }
-//                }
-                
             }
             
         }
         
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if tableView.selectedRow < 0 {
+            return false
+        }
+        return true
+        
+    }
 
 }
 

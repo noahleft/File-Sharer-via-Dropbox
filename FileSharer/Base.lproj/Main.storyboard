@@ -873,7 +873,7 @@
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController objectClassName="FileSharer.FileObject" id="EsF-hJ-oqs">
+                <arrayController objectClassName="FileSharer.FileObject" avoidsEmptySelection="NO" id="EsF-hJ-oqs">
                     <connections>
                         <binding destination="XfG-lQ-9wD" name="contentArray" keyPath="self.filelist" id="B2g-pI-nfH"/>
                     </connections>
