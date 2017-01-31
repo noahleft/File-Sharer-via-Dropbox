@@ -686,17 +686,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="380"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k8G-WO-wWA">
-                                <rect key="frame" x="18" y="332" width="74" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zev-cd-FgW">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="pressLogin:" target="XfG-lQ-9wD" id="nYt-Rh-9te"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGh-Fb-4th">
                                 <rect key="frame" x="391" y="332" width="75" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -825,17 +814,61 @@
                                     <segue destination="fC3-oB-dHl" kind="sheet" id="h1f-Pu-xbs"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPe-Gz-Pzd">
+                                <rect key="frame" x="18" y="340" width="154" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="AFF-p5-0kO"/>
+                                    <constraint firstAttribute="height" constant="20" id="TSe-dG-4WX"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Account" id="pc6-Zt-AMY">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="XfG-lQ-9wD" name="value" keyPath="self.userAccount" id="n7z-k0-TLm"/>
+                                </connections>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kh0-Jg-BQw">
+                                <rect key="frame" x="184" y="332" width="83" height="32"/>
+                                <buttonCell key="cell" type="push" title="Logout" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="np6-Da-IKF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pressLogout:" target="XfG-lQ-9wD" id="Q7L-9n-FAD"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k8G-WO-wWA">
+                                <rect key="frame" x="14" y="332" width="74" height="32"/>
+                                <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zev-cd-FgW">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pressLogin:" target="XfG-lQ-9wD" id="nYt-Rh-9te"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="k8G-WO-wWA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="68K-62-JF5"/>
                             <constraint firstAttribute="bottom" secondItem="Rq3-fR-edX" secondAttribute="bottom" constant="60" id="DhQ-Kx-PIv"/>
                             <constraint firstItem="Rq3-fR-edX" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="60" id="Et7-b7-xei"/>
+                            <constraint firstItem="TPe-Gz-Pzd" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="HKT-4d-6vG"/>
                             <constraint firstAttribute="trailing" secondItem="Rq3-fR-edX" secondAttribute="trailing" id="LFY-lN-3Po"/>
+                            <constraint firstItem="TPe-Gz-Pzd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Sxe-Ho-yFK"/>
+                            <constraint firstItem="Kh0-Jg-BQw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="UaD-aj-mX6"/>
                             <constraint firstItem="Rq3-fR-edX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="cHB-fs-12L"/>
+                            <constraint firstItem="k8G-WO-wWA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="gnh-9i-ZUS"/>
+                            <constraint firstItem="Kh0-Jg-BQw" firstAttribute="leading" secondItem="TPe-Gz-Pzd" secondAttribute="trailing" constant="20" id="hPD-vy-B1P"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="accountLabel" destination="TPe-Gz-Pzd" id="TPx-Fh-3Yy"/>
                         <outlet property="arrayController" destination="EsF-hJ-oqs" id="MhG-WH-T97"/>
+                        <outlet property="fetchButton" destination="VGh-Fb-4th" id="wS3-3h-IuC"/>
                         <outlet property="loginButton" destination="k8G-WO-wWA" id="HI0-hS-orJ"/>
+                        <outlet property="logoutButton" destination="Kh0-Jg-BQw" id="EYE-Df-z8f"/>
                         <outlet property="tableView" destination="7FH-cE-KYe" id="jc3-m3-8Eu"/>
                     </connections>
                 </viewController>

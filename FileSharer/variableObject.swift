@@ -14,6 +14,9 @@ class FileObject : NSObject {
     var fileName : String
     var filePath : String
     var id : Int
+    var descri: String {
+        return "\(id) "+fileName
+    }
     
     init(index : Int, name : String, path : String) {
         id = index

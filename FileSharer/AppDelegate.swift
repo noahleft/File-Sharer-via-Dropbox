@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     switch authResult {
                     case .success:
                         print("Success! User is logged into Dropbox.")
+                        self.saveAccountName()
                     case .cancel:
                         print("Authorization flow was manually canceled by user!")
                     case .error(_, let description):
@@ -40,6 +41,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    func saveAccountName() {
+        if let client = DropboxClientsManager.authorizedClient {
+            _ = client.users.getCurrentAccount().response { response, error in
+                if let result = response {
+                    print(result.accountId)
+                    UserDefaults.standard.set(result.email , forKey: "account")
+                    UserDefaults.standard.set(true, forKey: "login")
+                }
+                else {
+                    print("request account id fail")
+                }
+            }
+            
+        }
+    }
 
 }
 

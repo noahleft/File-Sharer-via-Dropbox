@@ -13,18 +13,44 @@ import SwiftyDropbox
 class ViewController: NSViewController {
 
     @IBOutlet weak var loginButton: NSButton!
+    @IBOutlet weak var logoutButton: NSButton!
+    @IBOutlet weak var fetchButton: NSButton!
+    @IBOutlet weak var accountLabel: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet var arrayController: NSArrayController!
     
     var filenames: Array<String>?
     dynamic var filelist : [FileObject] = []
-  
+    dynamic var userAccount : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        checkUI()
     }
 
+    func checkUI() {
+        
+        if UserDefaults.standard.bool(forKey: "login") {
+            loginButton.isHidden = true
+            logoutButton.isHidden = false
+            accountLabel.isHidden = false
+            fetchButton.isHidden = false
+        }
+        else {
+            loginButton.isHidden = false
+            logoutButton.isHidden = true
+            accountLabel.isHidden = true
+            fetchButton.isHidden = true
+        }
+        
+        if let keyAccount = UserDefaults.standard.string(forKey: "account") {
+            userAccount = keyAccount
+        }
+    }
+    
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
@@ -37,13 +63,11 @@ class ViewController: NSViewController {
     
     @IBAction func pressFetch(_ sender: Any) {
         fetchFileList()
-        checkLoginButton()
+        checkUI()
     }
     
-    func checkLoginButton() {
-        if (DropboxClientsManager.authorizedClient != nil) {
-            loginButton.isHidden = true
-        }
+    @IBAction func pressLogout(_ sender: Any) {
+        logoutAccount()
     }
     
     func pressLoginButton() {
@@ -54,6 +78,25 @@ class ViewController: NSViewController {
         })
     }
     
+    func logoutAccount() {
+        DropboxClientsManager.resetClients()
+        UserDefaults.standard.set(false, forKey: "login")
+    }
+    
+    func getCurrentAccount() {
+        if let client = DropboxClientsManager.authorizedClient {
+            _ = client.users.getCurrentAccount().response { response, error in
+                if let result = response {
+                    print(result.accountId)
+                }
+                else {
+                    print("request account id fail")
+                }
+            }
+            
+        }
+    }
+    
     func fetchFileList() {
         if let client = DropboxClientsManager.authorizedClient {
             print("dropbox client is auth.")
@@ -61,6 +104,7 @@ class ViewController: NSViewController {
             // List contents of app folder
             _ = client.files.listFolder(path: "").response { response, error in
                 if let result = response {
+                    self.filelist = []
                     print("Folder contents:")
                     for entry in result.entries {
                         print(entry.name)
@@ -79,6 +123,9 @@ class ViewController: NSViewController {
                 }
             }
             
+        }
+        else {
+            print("dropbox client is not ready.")
         }
     }
     
