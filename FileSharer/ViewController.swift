@@ -154,6 +154,13 @@ class ViewController: NSViewController {
         
     }
     
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "share" {
+            let nextVC = segue.destinationController as! ShareViewController
+            nextVC.file = filelist[tableView.selectedRow]
+        }
+    }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         if tableView.selectedRow < 0 {

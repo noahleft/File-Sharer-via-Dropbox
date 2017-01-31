@@ -11,10 +11,15 @@ import Cocoa
 
 class ShareViewController: NSViewController {
     
+    var file : FileObject? = nil
+    
     @IBAction func pressCloseButton(_ sender: Any) {
         dismiss(self)
     }
     
+    override func viewDidLoad() {
+        print(file?.descri)
+    }
     
     
 }
