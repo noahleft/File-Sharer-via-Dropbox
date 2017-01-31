@@ -804,7 +804,7 @@
                                     <rect key="frame" x="1" y="243" width="478" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="YSX-oA-Bgt">
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="YSX-oA-Bgt">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -820,6 +820,10 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="pressShareButton:" target="XfG-lQ-9wD" id="3zT-Ha-03o"/>
+                                    <segue destination="fC3-oB-dHl" kind="sheet" id="h1f-Pu-xbs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -830,6 +834,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arrayController" destination="EsF-hJ-oqs" id="MhG-WH-T97"/>
                         <outlet property="loginButton" destination="k8G-WO-wWA" id="HI0-hS-orJ"/>
                         <outlet property="tableView" destination="7FH-cE-KYe" id="jc3-m3-8Eu"/>
                     </connections>
@@ -842,6 +847,32 @@
                 </arrayController>
             </objects>
             <point key="canvasLocation" x="75" y="708"/>
+        </scene>
+        <!--Share View Controller-->
+        <scene sceneID="njC-VO-tXG">
+            <objects>
+                <viewController id="fC3-oB-dHl" customClass="ShareViewController" customModule="FileSharer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="FQc-6J-i4d">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-xZ-x3x">
+                                <rect key="frame" x="358" y="13" width="75" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pK4-97-Rta">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pressCloseButton:" target="fC3-oB-dHl" id="oqg-bo-7rs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="EbM-fp-tPL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="708"/>
         </scene>
     </scenes>
 </document>

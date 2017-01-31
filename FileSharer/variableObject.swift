@@ -12,11 +12,13 @@ import Foundation
 class FileObject : NSObject {
     
     var fileName : String
+    var filePath : String
     var id : Int
     
-    init(index : Int, name : String) {
+    init(index : Int, name : String, path : String) {
         id = index
         fileName = name
+        filePath = path
         
         super.init()
     }
