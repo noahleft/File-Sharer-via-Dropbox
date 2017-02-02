@@ -48,6 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     print(result.accountId)
                     UserDefaults.standard.set(result.email , forKey: "account")
                     UserDefaults.standard.set(true, forKey: "login")
+                    eventManager.triggerUI()
                 }
                 else {
                     print("request account id fail")
@@ -58,4 +59,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 }
+
+
 

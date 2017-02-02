@@ -17,10 +17,10 @@
 		2EE34F3B1E3A2B68000F8BD0 /* SwiftyDropbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE34F391E3A2B68000F8BD0 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2EE34F3D1E3A2B73000F8BD0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE34F3C1E3A2B73000F8BD0 /* Alamofire.framework */; };
 		2EE34F3F1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EE34F3E1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM */; };
-		2EE34F411E3A2C9F000F8BD0 /* Alamofire.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 2EE34F401E3A2C9F000F8BD0 /* Alamofire.framework.dSYM */; };
 		2EEFF7521E3A3071005D0325 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE34F3C1E3A2B73000F8BD0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2EEFF7541E3E2C04005D0325 /* variableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEFF7531E3E2C04005D0325 /* variableObject.swift */; };
 		2EEFF7561E40D0BB005D0325 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEFF7551E40D0BB005D0325 /* ShareViewController.swift */; };
+		2EEFF75A1E41A9F4005D0325 /* EventTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEFF7591E41A9F4005D0325 /* EventTrigger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,12 +78,14 @@
 		2E587C021E352AF600FB2490 /* FileSharerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileSharerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E587C061E352AF600FB2490 /* FileSharerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSharerUITests.swift; sourceTree = "<group>"; };
 		2E587C081E352AF600FB2490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E5B80CC1E423EC700C632E3 /* FileSharer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FileSharer.entitlements; sourceTree = "<group>"; };
 		2EE34F391E3A2B68000F8BD0 /* SwiftyDropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyDropbox.framework; path = Carthage/Build/Mac/SwiftyDropbox.framework; sourceTree = "<group>"; };
 		2EE34F3C1E3A2B73000F8BD0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		2EE34F3E1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyDropbox.framework.dSYM; path = Carthage/Build/Mac/SwiftyDropbox.framework.dSYM; sourceTree = "<group>"; };
 		2EE34F401E3A2C9F000F8BD0 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/Mac/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 		2EEFF7531E3E2C04005D0325 /* variableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = variableObject.swift; sourceTree = "<group>"; };
 		2EEFF7551E40D0BB005D0325 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		2EEFF7591E41A9F4005D0325 /* EventTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTrigger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +139,11 @@
 		2E587BE81E352AF600FB2490 /* FileSharer */ = {
 			isa = PBXGroup;
 			children = (
+				2E5B80CC1E423EC700C632E3 /* FileSharer.entitlements */,
 				2E587BE91E352AF600FB2490 /* AppDelegate.swift */,
 				2E587BEB1E352AF600FB2490 /* ViewController.swift */,
 				2EEFF7551E40D0BB005D0325 /* ShareViewController.swift */,
+				2EEFF7591E41A9F4005D0325 /* EventTrigger.swift */,
 				2EEFF7531E3E2C04005D0325 /* variableObject.swift */,
 				2E587BED1E352AF600FB2490 /* Assets.xcassets */,
 				2E587BEF1E352AF600FB2490 /* Main.storyboard */,
@@ -249,6 +253,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = TD2N22QLUY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					2E587BF61E352AF600FB2490 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -291,7 +300,6 @@
 			files = (
 				2E587BEE1E352AF600FB2490 /* Assets.xcassets in Resources */,
 				2E587BF11E352AF600FB2490 /* Main.storyboard in Resources */,
-				2EE34F411E3A2C9F000F8BD0 /* Alamofire.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +328,7 @@
 				2EEFF7541E3E2C04005D0325 /* variableObject.swift in Sources */,
 				2EEFF7561E40D0BB005D0325 /* ShareViewController.swift in Sources */,
 				2E587BEA1E352AF600FB2490 /* AppDelegate.swift in Sources */,
+				2EEFF75A1E41A9F4005D0325 /* EventTrigger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FileSharer/FileSharer.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TD2N22QLUY;
@@ -469,6 +479,7 @@
 				);
 				INFOPLIST_FILE = FileSharer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = noahleft.FileSharer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -479,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FileSharer/FileSharer.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TD2N22QLUY;
@@ -488,6 +500,7 @@
 				);
 				INFOPLIST_FILE = FileSharer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = noahleft.FileSharer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

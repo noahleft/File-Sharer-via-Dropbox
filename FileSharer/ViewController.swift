@@ -9,7 +9,6 @@
 import Cocoa
 import SwiftyDropbox
 
-
 class ViewController: NSViewController {
 
     @IBOutlet weak var loginButton: NSButton!
@@ -19,15 +18,21 @@ class ViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet var arrayController: NSArrayController!
     
-    var filenames: Array<String>?
     dynamic var filelist : [FileObject] = []
     dynamic var userAccount : String = ""
+    
+    func cleanUp() {
+        filelist = []
+        userAccount = ""
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         checkUI()
+        
+        eventManager.addObserver(self, forKeyPath: "UI_modify", options: NSKeyValueObservingOptions(rawValue : 0), context: nil)
     }
 
     func checkUI() {
@@ -81,6 +86,8 @@ class ViewController: NSViewController {
     func logoutAccount() {
         DropboxClientsManager.resetClients()
         UserDefaults.standard.set(false, forKey: "login")
+        cleanUp()
+        checkUI()
     }
     
     func getCurrentAccount() {
@@ -110,12 +117,13 @@ class ViewController: NSViewController {
                         print(entry.name)
                         
                         // Check that file is a photo (by file extension)
-                        if entry.name.hasSuffix(".jpg") || entry.name.hasSuffix(".png") {
+//                        if entry.name.hasSuffix(".jpg") || entry.name.hasSuffix(".png") {
                             // Add photo!
+                            
                             let index : Int = self.filelist.count + 1
                             let file : FileObject = FileObject(index: index, name: entry.name, path: entry.pathLower!)
                             self.filelist.append(file)
-                        }
+//                        }
                     }
                     
                 } else {
@@ -129,8 +137,7 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func pressShareButton(_ sender: Any) {
-        
+    func pressShareButton(_ sender: Any) {
         if let selectedFile : FileObject = arrayController.selectedObjects.first as! FileObject? {
             //
             print("select \(selectedFile.fileName) to share")
@@ -168,6 +175,12 @@ class ViewController: NSViewController {
         }
         return true
         
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "UI_modify" {
+            checkUI()
+        }
     }
 
 }
