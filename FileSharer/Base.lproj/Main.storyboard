@@ -267,9 +267,24 @@
                                     <action selector="pressLogin:" target="XfG-lQ-9wD" id="nYt-Rh-9te"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SDS-oj-Ez8">
+                                <rect key="frame" x="20" y="19" width="25" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="E33-K8-Jb7"/>
+                                    <constraint firstAttribute="width" constant="25" id="bce-vo-SJf"/>
+                                </constraints>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="78d-V4-Lti">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pressAddButton:" target="XfG-lQ-9wD" id="MDk-pd-C24"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="k8G-WO-wWA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="68K-62-JF5"/>
+                            <constraint firstItem="SDS-oj-Ez8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="9jQ-Ev-VVx"/>
                             <constraint firstAttribute="bottom" secondItem="Rq3-fR-edX" secondAttribute="bottom" constant="60" id="DhQ-Kx-PIv"/>
                             <constraint firstItem="Rq3-fR-edX" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="60" id="Et7-b7-xei"/>
                             <constraint firstItem="TPe-Gz-Pzd" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="HKT-4d-6vG"/>
@@ -277,6 +292,7 @@
                             <constraint firstItem="TPe-Gz-Pzd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Sxe-Ho-yFK"/>
                             <constraint firstItem="Kh0-Jg-BQw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="UaD-aj-mX6"/>
                             <constraint firstItem="Rq3-fR-edX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="cHB-fs-12L"/>
+                            <constraint firstAttribute="bottom" secondItem="SDS-oj-Ez8" secondAttribute="bottom" constant="20" id="dXa-cx-2Gv"/>
                             <constraint firstItem="k8G-WO-wWA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="gnh-9i-ZUS"/>
                             <constraint firstItem="Kh0-Jg-BQw" firstAttribute="leading" secondItem="TPe-Gz-Pzd" secondAttribute="trailing" constant="20" id="hPD-vy-B1P"/>
                         </constraints>
@@ -379,4 +395,7 @@
             <point key="canvasLocation" x="666" y="708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
 </document>
