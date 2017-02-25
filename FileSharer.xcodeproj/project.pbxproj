@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E43B4C01E605C5300C00CEE /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EE34F401E3A2C9F000F8BD0 /* Alamofire.framework.dSYM */; };
 		2E587BEA1E352AF600FB2490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E587BE91E352AF600FB2490 /* AppDelegate.swift */; };
 		2E587BEC1E352AF600FB2490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E587BEB1E352AF600FB2490 /* ViewController.swift */; };
 		2E587BEE1E352AF600FB2490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E587BED1E352AF600FB2490 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				2E43B4C01E605C5300C00CEE /* Alamofire.framework.dSYM in CopyFiles */,
 				2EE34F3F1E3A2BA8000F8BD0 /* SwiftyDropbox.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
