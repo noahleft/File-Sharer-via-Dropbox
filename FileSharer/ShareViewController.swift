@@ -21,6 +21,10 @@ class ShareViewController: NSViewController {
         dismiss(self)
     }
     
+    @IBAction func pressCopyToClipboard(_ sender: Any) {
+        copyToClipboard()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,6 +82,11 @@ class ShareViewController: NSViewController {
             }
             
         }
+    }
+    
+    func copyToClipboard() {
+        NSPasteboard.general().clearContents()
+        NSPasteboard.general().setString(shareLink, forType: NSStringPboardType)
     }
     
     func generateQRCode() {
