@@ -75,6 +75,11 @@ class ViewController: NSViewController {
         logoutAccount()
     }
     
+    @IBAction func pressAddButton(_ sender: Any) {
+        selectFileToUpload()
+    }
+    
+    
     func pressLoginButton() {
         DropboxClientsManager.authorizeFromController(sharedWorkspace: NSWorkspace.shared(),
                                                       controller: self,
@@ -88,6 +93,50 @@ class ViewController: NSViewController {
         UserDefaults.standard.set(false, forKey: "login")
         cleanUp()
         checkUI()
+    }
+    
+    func selectFileToUpload() {
+        
+        let dialog = NSOpenPanel();
+        
+        dialog.title                   = "Choose file to upload";
+        dialog.showsResizeIndicator    = true;
+        dialog.showsHiddenFiles        = false;
+        dialog.canChooseDirectories    = false;
+        dialog.canCreateDirectories    = false;
+        dialog.allowsMultipleSelection = false;
+        dialog.allowedFileTypes        = ["jpg","png","pdf"];
+        
+        if (dialog.runModal() == NSModalResponseOK) {
+            let result = dialog.url // Pathname of the file
+            
+            if (result != nil) {
+                let path = result!.path
+                
+                print("source: \(path)")
+                uploadFile(url: result!)
+            }
+        } else {
+            // User clicked on "Cancel"
+            return
+        }
+        
+    }
+    
+    func uploadFile(url : URL) {
+        if let client = DropboxClientsManager.authorizedClient {
+            let fileName = url.lastPathComponent
+            _ = client.files.upload(path: "/"+fileName, input: url).response { response, error in
+                if let response = response {
+                    print(response)
+                } else if let error = error {
+                    print(error)
+                }
+                }
+                .progress { progressData in
+                    print(progressData)
+            }
+        }
     }
     
     func getCurrentAccount() {
