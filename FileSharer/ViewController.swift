@@ -162,7 +162,9 @@ class ViewController: NSViewController {
                 if let result = response {
                     self.filelist = []
                     print("Folder contents:")
-                    for entry in result.entries {
+                    let resultList = result.entries.sorted(by: { (s1 : Files.Metadata, s2 : Files.Metadata) -> Bool in
+                      return s1.name < s2.name })
+                    for entry in resultList {
                         print(entry.name)
                         
                         // Check that file is a photo (by file extension)
